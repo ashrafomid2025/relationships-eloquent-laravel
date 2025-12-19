@@ -13,6 +13,9 @@ class Student extends Model
        return  $this->belongsTo(User::class, 'user_id', 'id');
     }
     public function subject(){
-        return $this->belongsToMany(Subject::class,'grades','student_id','subject_id');
+        return $this->belongsToMany(Subject::class,'grades','student_id','subject_id')->withPivot('score');
+    }
+    public function teacher(){
+        return $this->hasOneThrough(Teacher::class, Classes::class, 'id', 'id','class_id', 'teacher_id');
     }
 }
