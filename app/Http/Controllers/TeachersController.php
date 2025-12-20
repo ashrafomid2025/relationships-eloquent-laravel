@@ -13,4 +13,5 @@ class TeachersController extends Controller
        return $teachers;
     }
     // has one through teacher to student
+    // has many through student to teacher
 }
