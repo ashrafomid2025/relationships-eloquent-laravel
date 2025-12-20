@@ -18,4 +18,6 @@ class Student extends Model
     public function teacher(){
         return $this->hasOneThrough(Teacher::class, Classes::class, 'id', 'id','class_id', 'teacher_id');
     }
+    // with pivote to get the grade 
+    
 }
