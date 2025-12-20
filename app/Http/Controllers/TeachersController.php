@@ -12,4 +12,5 @@ class TeachersController extends Controller
        $teachers =  Teacher::with('students')->get();
        return $teachers;
     }
+    // has one through teacher to student
 }
