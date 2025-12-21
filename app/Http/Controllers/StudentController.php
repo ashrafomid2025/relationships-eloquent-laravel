@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     //
-    public function index(){
-       $students =  Student::with('teacher')->get();
-       return $students;
-      }
+     public function index()
+     {
+       $students =  Student::where('id','>',56)->get();       return $students;
+    }
 }
