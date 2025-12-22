@@ -13,3 +13,4 @@ Route::get('users',[UserController::class, 'index']);
 Route::get('students',[StudentController::class, 'index']);
 Route::get('teacher',[TeachersController::class, 'index']);
 Route::get('classes',[ClassesController::class, 'index']);
+Route::get('addteacher', [TeachersController::class, 'showAddForm']);
