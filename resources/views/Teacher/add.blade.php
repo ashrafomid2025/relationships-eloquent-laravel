@@ -10,7 +10,7 @@
      <div class="h-screen w-full flex justify-center items-center">
         <div class="flex flex-col border w-10/12 gap-5 p-5">
             <h1 class="text-blue-500 text-5xl font-bold text-center">Add Teacher</h1>
-            <form action="" method="post" enctype="multipart/form-data" class="flex flex-col gap-3">
+            <form action="{{ URL('') }}" method="post" enctype="multipart/form-data" class="flex flex-col gap-3">
                 @csrf
                 <input type="text" placeholder="Name" class="w-full py-2 border focus:outline-0">    
                <input type="text" placeholder="Phone Number" class="w-full py-2 border focus:outline-0">
