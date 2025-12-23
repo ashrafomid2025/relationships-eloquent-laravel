@@ -11,6 +11,11 @@
         <div class="w-11.12 mx-auto">
             <h1>All teachers</h1>
         </div>
+        <table>
+            <tr>
+                <th></th>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
