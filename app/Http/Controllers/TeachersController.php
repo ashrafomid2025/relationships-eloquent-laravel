@@ -11,9 +11,9 @@ class TeachersController extends Controller
 {
     //
     public function index(){
-       $teachers =  Teacher::all();
-
-       return view('Teacher.allTeacher');
+       $teachers =  Teacher::with('images')->get();
+      //  return $teachers;
+       return view('Teacher.allTeacher')->with('teachers',$teachers);
      }
 
      public function showAddForm(){
