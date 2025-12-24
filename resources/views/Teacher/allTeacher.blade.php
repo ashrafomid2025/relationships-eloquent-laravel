@@ -26,7 +26,8 @@
                     @if (count($teacher->images)>0)
                         <td>
                             {{-- {{ $teacher->images->imageable_id }} --}}
-                            <img src="{{ 'storage/'. $teacher->images[0]->path }}" class="w-8 h-8" alt="">
+                            <img src="{{ 'storage/'. $teacher->images[0]->path }}" class="w-10 h-10" alt="">
+
                         </td>
                     @endif
                 </tr>
