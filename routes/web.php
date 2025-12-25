@@ -15,3 +15,7 @@ Route::get('teacher',[TeachersController::class, 'index']);
 Route::get('classes',[ClassesController::class, 'index']);
 Route::get('addteacher', [TeachersController::class, 'showAddForm']);
 Route::post('createteacher', [TeachersController::class, 'create']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
