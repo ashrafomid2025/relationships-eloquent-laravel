@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Log;
 use Symfony\Component\HttpFoundation\Response;
 
 class GlobalMiddleWare
@@ -15,6 +16,7 @@ class GlobalMiddleWare
      */
     public function handle(Request $request, Closure $next): Response
     {
+        Log::info("someone visited ".$request->method(). ' '. $request->path() );
         return $next($request);
     }
 }
