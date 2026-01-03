@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Student;
+use App\Models\User;
+use Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,5 +23,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        Gate::define('edite-student', function(User $user, Student $student){
+            return $user->id === $student->user_id;
+        });
     }
 }

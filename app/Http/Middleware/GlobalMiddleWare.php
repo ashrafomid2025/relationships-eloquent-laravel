@@ -18,5 +18,6 @@ class GlobalMiddleWare
     {
         Log::info("someone visited ".$request->method(). ' '. $request->path() );
         return $next($request);
+        
     }
 }
